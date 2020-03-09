@@ -1,7 +1,5 @@
-#include<iostream>
 #include<math.h>
-#include<fstream>
-using namespace std;
+#include<iostream>
 int main()
 {	
 	int totaldays,a,b,c;
@@ -9,16 +7,16 @@ int main()
 	b=totaldays%28;
 	c=totaldays%33;
 	if(a<=11)
-		cout<<"ÄúµÄÌåÁ¦´¦ÓÚÍúÊ¢ÆÚ½¨Òé¹¤×÷ÔË¶¯£¡"<<endl;
+		printf("æ‚¨çš„ä½“åŠ›å¤„äºŽæ—ºç››æœŸå»ºè®®å·¥ä½œè¿åŠ¨ï¼\n");
 	else
-		cout<<"ÄúµÄÌåÁ¦±È½ÏµÍÃÔ£¬½¨Òé¶àÐÝÏ¢£¡"<<endl;
+		printf("æ‚¨çš„ä½“åŠ›æ¯”è¾ƒä½Žè¿·ï¼Œå»ºè®®å¤šä¼‘æ¯ï¼\n");
 	if(b<=14)
-		cout<<"ÄúµÄÇéÐ÷±È½Ï¸ßÕÇ£¡"<<endl;
+		printf("æ‚¨çš„æƒ…ç»ªæ¯”è¾ƒé«˜æ¶¨ï¼\n");
 	else
-		cout<<"ÄúµÄÇéÐ÷±È½ÏµÍÃÔ£¡"<<endl;
+		printf("æ‚¨çš„æƒ…ç»ªæ¯”è¾ƒä½Žè¿·ï¼\n");
 	if(c<=16)
-		cout<<"ÄúÄ¿Ç°µÄÖÇÁ¦´¦ÓÚ»Æ½ðÊ±ÆÚ£¡"<<endl;
+		printf("æ‚¨ç›®å‰çš„æ™ºåŠ›å¤„äºŽé»„é‡‘æ—¶æœŸï¼\n");
 	else
-		cout<<"Ä¿Ç°ÄúµÄÖÇÁ¦´¦ÓÚµÍÃÔÆÚ£¡"<<endl;
+		printfï¼ˆ"ç›®å‰æ‚¨çš„æ™ºåŠ›å¤„äºŽä½Žè¿·æœŸï¼\n"ï¼‰;
 	system("pause");
 }
