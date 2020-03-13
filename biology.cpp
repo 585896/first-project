@@ -21,14 +21,14 @@ int main(){
 	int cutdays,adddays;
 	int totaldays=0,yeardays=0;
 	int leap;
-	printf("ÇëÊäÈë³öÉúÄêÔÂÈÕ£¬¸ñÊ½ÎªÄê-ÔÂ-ÈÕ\n");
+	printf("è¯·è¾“å…¥å‡ºç”Ÿå¹´æœˆæ—¥ï¼Œæ ¼å¼ä¸ºå¹´-æœˆ-æ—¥\n");
 	scanf("%d-%d-%d",&start_year,&start_month,&start_day);
-	printf("ÇëÊäÈë´ËÊ±ÄêÔÂÈÕ£¬¸ñÊ½ÎªÄê-ÔÂ-ÈÕ\n");
+	printf("è¯·è¾“å…¥æ­¤æ—¶å¹´æœˆæ—¥ï¼Œæ ¼å¼ä¸ºå¹´-æœˆ-æ—¥\n");
 	scanf("%d-%d-%d",&fin_year,&fin_month,&fin_day);
 	adddays=lastdays(fin_year,fin_month,fin_day);
 	cutdays=lastdays(start_year,start_month,start_day);
-	printf("%d\n",cutdays);// for test  ĞèÒª¼õÈ¥µÄÌìÊı £¨³öÉúÄê¿ªÊ¼Ö±µ½³öÉúÊ±£© 
-	printf("%d\n",adddays);// for test   ĞèÒª¼ÓÉÏµÄÌìÊı £¨´ËÊ±Äê¿ªÊ¼Ö±µ½´ËÊ±£© 
+	//printf("%d\n",cutdays);// for test  éœ€è¦å‡å»çš„å¤©æ•° ï¼ˆå‡ºç”Ÿå¹´å¼€å§‹ç›´åˆ°å‡ºç”Ÿæ—¶ï¼‰ 
+	//printf("%d\n",adddays);// for test   éœ€è¦åŠ ä¸Šçš„å¤©æ•° ï¼ˆæ­¤æ—¶å¹´å¼€å§‹ç›´åˆ°æ­¤æ—¶ï¼‰ 
 	for(int i=start_year;i<fin_year;i++){
 	if(i%4!=0) leap=0;
 	else if(i%100!=0) leap=1;
@@ -38,6 +38,24 @@ int main(){
 	else yeardays+=365;
 	}
 	totaldays=yeardays+adddays-cutdays;
-	printf("%d\n",totaldays);//for test £¨´Ó³öÉúµ½½ñÈÕ×Ü¹²µÄÌìÊı£©
-	system("pause"); 
+	printf("ä»å‡ºç”Ÿåˆ°ä»Šæ—¥æ€»å¤©æ•°ï¼š%d\n",totaldays);//for test ï¼ˆä»å‡ºç”Ÿåˆ°ä»Šæ—¥æ€»å…±çš„å¤©æ•°ï¼‰
+	int a,b,c;
+	a=totaldays%23;
+	b=totaldays%28;
+	c=totaldays%33;
+	if(a<=11)
+		printf("æ‚¨çš„ä½“åŠ›å¤„äºæ—ºç››æœŸï¼Œå»ºè®®å·¥ä½œè¿åŠ¨ï¼\n");
+	else
+		printf("æ‚¨çš„ä½“åŠ›æ¯”è¾ƒä½è¿·ï¼Œå»ºè®®å¤šä¼‘æ¯ï¼\n");
+	if(b<=14)
+		printf("æ‚¨çš„æƒ…ç»ªæ¯”è¾ƒé«˜æ¶¨ï¼Œå»ºè®®ä½ å­¦ä¹ ï¼\n");
+	else
+		printf("æ‚¨çš„æƒ…ç»ªæ¯”è¾ƒä½è¿·ï¼Œå»ºè®®ä½ å¤šå¬å¬éŸ³ä¹æ”¾æ¾ï¼\n");
+	if(c<=16)
+		printf("æ‚¨ç›®å‰çš„æ™ºåŠ›å¤„äºé»„é‡‘æ—¶æœŸï¼Œå»ºè®®ä½ å¤šå»å­¦ä¹ ï¼\n");
+	else
+	printf("æ‚¨çš„æ™ºåŠ›æ¯”è¾ƒä½è¿·ï¼Œå»ºè®®ä½ æ”¾æ¾æ”¾æ¾ï¼\n");
+	system("pause");
 }
+
+
